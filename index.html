@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Sombra · exploração em three.js</title>
+    <meta name="theme-color" content="#070b14" />
+  </head>
+  <body>
+    <main class="game">
+      <canvas id="canvas" aria-label="Mundo sombrio em 3D"></canvas>
+      <div class="vignette" id="vignette" aria-hidden="true"></div>
+      <div class="hurt" id="hurt" aria-hidden="true"></div>
+
+      <div class="hud" id="hud" hidden>
+        <div class="bars">
+          <div class="bar luz"><i id="luz"></i><span>Luz</span></div>
+          <div class="bar sta"><i id="sta"></i></div>
+        </div>
+        <div class="relics" aria-live="polite"><span id="relics">0/7</span><small>relíquias</small>
+          <small id="time" class="time">0:00</small>
+          <div class="prox"><i id="prox"></i></div>
+        </div>
+        <button type="button" id="mute" class="icon" aria-label="Som">♪</button>
+      </div>
+      <p class="toast" id="toast" role="status"></p>
+      <p class="threat" id="threat" aria-hidden="true">Algo sussurra na névoa…</p>
+
+      <div class="overlay" id="overlay">
+        <h1 id="title">Sombra</h1>
+        <p id="sub" class="sub">Um viajante, uma lanterna e sete relíquias perdidas numa floresta que não dorme.</p>
+        <button id="play" type="button">Entrar na névoa</button>
+        <ul class="keys" id="keys">
+          <li><b>W A S D</b> mover</li>
+          <li><b>Mouse</b> olhar (clique para capturar)</li>
+          <li><b>Shift</b> correr</li>
+          <li><b>F / Espaço</b> clarão que afasta as sombras</li>
+          <li><b>Esc</b> pausar · <b>M</b> som</li>
+        </ul>
+        <p class="tip">Siga os feixes de luz azul. As sombras não te alcançam se você não parar.</p>
+      </div>
+
+      <div class="touch" id="touch" hidden>
+        <div class="stick" id="stick"><div class="knob" id="knob"></div></div>
+        <button type="button" id="tsprint" class="tbtn">Correr</button>
+        <button type="button" id="tflare" class="tbtn flare">Clarão</button>
+      </div>
+      <p class="unsupported" id="unsupported" hidden>Seu navegador não suporta WebGL, necessário para o jogo.</p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
